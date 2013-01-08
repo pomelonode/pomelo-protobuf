@@ -1,0 +1,12 @@
+{
+  "name": "lord_of_pomelo",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+  },
+  "devDependencies": {
+      "should": ">=0.0.1"
+    , "mocha": ">=0.0.1"
+  }
+}
+
