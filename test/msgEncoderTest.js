@@ -13,7 +13,7 @@ describe('msgEncoderTest', function(){
 	}
 	
 	var protos = require('./protos.json');
-	protobuf.init({serverProtos:protos, clientProtos:protos});
+	console.log(protos['onMove']);protobuf.init({serverProtos:protos, clientProtos:protos});
 	
 	describe('encodeTest', function(){
 		var str = protobuf.encode('onMove', msg);
