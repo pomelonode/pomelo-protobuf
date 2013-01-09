@@ -14,7 +14,7 @@ describe('encoder test', function(){
 		}
 	})
 	
-	describe('sInt32 test, for encode and decode 10000 random number', function(){
+	describe('sInt32 adn sInt64 test, for encode and decode 10000 random number', function(){
 		var limit = 0xfffffffffffff;
 		
 		for(var i = 0; i < 10000; i++){

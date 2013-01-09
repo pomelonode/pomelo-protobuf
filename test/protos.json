@@ -12,7 +12,7 @@
 		},
 		
 		"repeated Path paths" : 2,
-		"required uInt32 speed" : 3,
+		"optional uInt32 speed" : 3,
 		"required string speed1" : 4,
 		"required double a" : 5
 	}
