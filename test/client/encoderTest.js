@@ -16,14 +16,25 @@ describe('client encoder test', function(){
 		}
 	})
 	
-		describe('double test for 10000 times', function(){
+	describe('double test for 10000 times', function(){
 		for(var i = 0; i < 10000; i++){
-			var float = Math.random();
+			var double = Math.random();
 			
-			var bytes = encoder.encodeDouble(float);
+			var bytes = encoder.encodeDouble(double);
 			var result = encoder.decodeDouble(bytes);
 			
-			float.should.equal(result);
+			double.should.equal(result);
 		}
+	})
+	
+	describe('string decode speed test', function(){
+		var array = [];
+		var length = 10000;
+		for(var i = 0; i < length; i++,arr.push(0));
+		var start = Date.now();
+		var str = String.fromCharCode.apply(null, array);
+		var end = Date.now();
+		
+		console.log('cost time : %j, length : %j', end-start, str.length);
 	})
 })
