@@ -24,6 +24,7 @@ describe('msgEncoderTest', function(){
 	describe('encodeTest', function(){
 		var buffer = encoder.encode('onMove', msg);
 		
+		console.log(buffer);
 		var decodeMsg = decoder.decode('onMove', buffer);
 		
 		//msg.should.equal(decodeMsg);

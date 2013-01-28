@@ -15,5 +15,68 @@
 		"optional uInt32 speed" : 3,
 		"required string speed1" : 4,
 		"required double a" : 5
+	},
+	"onAttack" : {
+		"required uInt32 attacker" : 1,
+		"required uInt32 target" : 2,
+		"message AttackResult" : {
+			"required uInt32 result" :  1,
+			"required uInt32 damage" : 2,
+			"required uInt32 mpUse" : 3,
+			"repeated Item items" : 4,
+			"message Item" : {
+				"required uInt32 kindId" : 1,
+				"required uInt32 x" : 2,
+				"required uInt32 y" : 3,
+				"required uInt32 entityId" : 4,
+				"required uInt32 playerId" : 5
+			}
+		},
+		"required AttackResult result" : 3,
+		"optional uInt32 exp" : 4,
+		"optional uInt32 reviveTime" : 5,
+	},
+	"onUpgrade" : {
+		""
+	},
+	"onPickItem" : {
+		"required uInt32 player" : 1,
+		"required uInt32 item" : 2,
+		"required uInt32 index" : 3
+	},
+	"onNPCTalk" : {
+		"required uInt32 npc" : 1,
+		"required string npcword" : 2,
+		"required string myword" : 3
+	},
+	"onRevive" : {
+		"required uInt32 entityId" : 1,
+		"required uInt32 x" : 2,
+		"required uInt32 y" : 3,
+		"required uInt32 hp" : 4
+	},
+	"onRemoveEntities" : {
+
+	},
+	"onPathCheckOut" : {
+		"required uInt32 entityId" : 1,
+		"message Position" : {
+			"required uInt32 x" : 1,
+			"required uInt32 y" : 2
+		},
+		"required Position position" : 2
+	},
+	"area.playerHandler.enterScene" : {
+		"required uInt32 code" : 1,
+		"message Player" : {
+
+
+		},
+		"required Player curPlayer" : 2,
+		"message Map" : {
+			"required uInt32 mapWeight" : 1,
+			"required uInt32 mapHeight" : 2,
+		}
 	}
+
 }
