@@ -10,7 +10,7 @@ describe('msgEncoderTest', function(){
 	var msg = {
 		entityId : 1,
 		paths : [{x : 1, y : 2, c : {a : 1}},
-						 {x : 3, y : 4, c : {a : 2}, tests : [{a:1}, {a:2}]}],
+							{x : 3, y : 4, c : {a : 2}, tests : [{a:1}, {a:2}]}],
 		speed : 110,
 		speed1 : 'ss',
 		a : 111.1111
