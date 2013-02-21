@@ -6,6 +6,7 @@
     "protobuf"
   ],
   "version": "0.2.0",
+  "main": "lib/client/protobuf.js",
   "scripts": [
     "lib/client/protobuf.js"
   ],
