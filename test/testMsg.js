@@ -11,7 +11,7 @@ tc['area.playerHandler.enterScene'] = {
           {'collisions':[]},
           {'collisions':[]},
           {'collisions':[
-            {'start':0,'length':3},
+            {'start':1,'length':3},
             {'start':79,'length':3}
           ]},
           {'collisions':[
