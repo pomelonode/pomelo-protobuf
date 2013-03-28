@@ -16,6 +16,5 @@ describe('msgEncoderTest', function(){
 
 			util.equal(msg, decodeMsg).should.equal(true);
 		}
-
 	});
 });
