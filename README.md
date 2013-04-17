@@ -42,7 +42,7 @@ To use the protos, we use a parser to parse the protos file into more machine fr
 Pomelo-protobuf has server code and client code for js.
 
 - The server code run in Node.JS environment, use Buffer to represent the binary data.
-- The client side code run on browser, use Buffer to represent the binary data.
+- The client side code run on browser, use ByteArray to represent the binary data.
 
 On average the Server version can be 60% higher than client version, with less memory usage. So we  highly recommend that use the server code on Node.JS for better performance.
 
