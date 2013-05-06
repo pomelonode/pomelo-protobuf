@@ -6,7 +6,7 @@
       "required uInt32 y" : 2
     },
     "repeated Path path" : 2,
-    "required uInt32 speed" : 3
+    "required float speed" : 3
   },
   "onAttack" : {
     "required uInt32 attacker" : 1,
