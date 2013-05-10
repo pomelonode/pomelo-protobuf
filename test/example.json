@@ -2,8 +2,8 @@
   "onMove" : {
     "required uInt32 entityId" : 1,
     "message Path": {
-      "required uInt32 x" : 1,
-      "required uInt32 y" : 2
+      "required double x" : 1,
+      "required double y" : 2
     },
     "repeated Path path" : 2,
     "required float speed" : 3
