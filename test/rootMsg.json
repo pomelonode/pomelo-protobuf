@@ -1,6 +1,6 @@
 {
   "message Path": {
-      "required double x" : 1,
+    "required double x" : 1,
   	"required double y" : 2
   },
   "message Map" : {
