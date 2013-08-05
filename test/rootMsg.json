@@ -1,0 +1,56 @@
+{
+  "message Path": {
+      "required double x" : 1,
+  	"required double y" : 2
+  },
+  "message Map" : {
+	  "message Collisions" : {
+	    "message Collison" : {
+	      "required uInt32 start" : 1,
+	      "required uInt32 length" : 2
+	    },
+	    "repeated Collison collisions" : 1
+	  },
+	  "required string name" : 1,
+	  "required uInt32 width" : 2,
+	  "required uInt32 height" : 3,
+	  "required uInt32 tileW" : 4,
+	  "required uInt32 tileH" : 5,
+	  "repeated Collisions weightMap" : 6
+	},
+	"message Item" : {
+    "required uInt32 entityId" : 1,
+    "required uInt32 kindId" : 2
+  },
+  "message Equipment" : {
+    "required uInt32 entityId" : 1,
+    "required uInt32 kindId" : 2
+  },
+	"message Entities" : {
+    "repeated Item item" : 1,
+    "repeated Equipment equipment" : 2
+  },
+  "onMove" : {
+    "required uInt32 entityId" : 1,
+    "repeated Path path" : 2,
+    "required float speed" : 3
+  },
+  "area.playerHandler.enterScene" : {
+  	"message Player" : {
+      "message Bag" : {
+        "message Item" : {
+          "required uInt32 id" : 1,
+          "optional string type" : 2
+        },
+        "repeated Item items" : 1
+      },
+      "required uInt32 entityId" : 1,
+      "required uInt32 kindId" : 2,
+      "required Bag bag" : 3,
+      "repeated Equipment equipments" : 4
+    },
+  	"optional Entities entities" : 1,
+  	"optional Player curPlayer" : 2,
+    "required Map map" : 3
+  }
+}
