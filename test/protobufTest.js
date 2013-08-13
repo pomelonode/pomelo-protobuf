@@ -13,7 +13,7 @@ describe('msgEncoderTest', function(){
 			var msg = tc[route];
 			var buffer = protobuf.encode(route, msg);
 
-console.log(msg);
+			console.log(msg);
 			console.log(buffer.length);
 			console.log(buffer)
 
