@@ -1,10 +1,15 @@
 var protobuf = require('../lib/protobuf');
 var fs = require('fs');
 
-var protos = protobuf.parse(require('./example.json'));
+var protoFile = "./rootMsg.json";
+var protoTarget = "./rootProtos.json";
+var msgFile = "./rootMsgTC";
+var msgTarget = "./rootMsg.json";
+
+var protos = protobuf.parse(require(protoFile));
 
 console.log(protos);
-fs.writeFile('./protos.json', JSON.stringify(protos, null ,2));
+fs.writeFile(protoTarget, JSON.stringify(protos, null ,2));
 
-fs.writeFile('./msg.json', JSON.stringify(require('./testMsg'), null ,2));
+fs.writeFile(msgTarget, JSON.stringify(require(msgFile), null ,2));
 
