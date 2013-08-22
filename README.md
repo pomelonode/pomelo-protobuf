@@ -38,6 +38,42 @@ Unlike the google protobuf, we write all the protos in the same file, with a uni
 
 To use the protos, we use a parser to parse the protos file into more machine friendly format, which is also a json format, then you can use the result to decode/encode messages.
 
+###RootMessage support
+you can write rootMessage in protos for global usage  
+```
+{
+  "message Path": {
+    "required double x" : 1,
+    "required double y" : 2
+  },
+  "message Equipment" : {
+    "required uInt32 entityId" : 1,
+    "required uInt32 kindId" : 2
+  },
+  "onMove" : {
+    "required uInt32 entityId" : 1,
+    "repeated Path path" : 2,
+    "required float speed" : 3
+  },
+  "area.playerHandler.enterScene" : {
+    "message Player" : {
+      "message Bag" : {
+        "message Item" : {
+          "required uInt32 id" : 1,
+          "optional string type" : 2
+        },
+        "repeated Item items" : 1
+      },
+      "required uInt32 entityId" : 1,
+      "required uInt32 kindId" : 2,
+      "required Bag bag" : 3,
+      "repeated Equipment equipments" : 4
+    },
+    "optional Player curPlayer" : 2
+  }
+}
+```
+
 ###Server side and Client side
 Pomelo-protobuf has server code and client code for js.
 
