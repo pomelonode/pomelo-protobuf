@@ -1,4 +1,4 @@
-#Pomelo-protobuf
+# Pomelo-protobuf
   Protobuf protocol is a high efficient binary protocol for data encode, this module implement the protobuf protocol, and used in [pomelo](https://github.com/NetEase/pomelo) for data transfer.
 Of course, pomelo-protobuf can also be used independently in other projects.
 ##Architecture
@@ -6,8 +6,8 @@ Unlike the google protobuf, we provide a universal encoder and decoder in pomelo
 
 ![pomelo protobuf](http://pomelo.netease.com/resource/documentImage/protocol/Protobuf_pomelo.png)
 
-##Usage
-###Define protos
+## Usage
+### Define protos
 To use pomelo-protobuf, you need to write a JSON file to define the message format. The syntax of the file is as the same as the .proto file in protobuf, but in JSON format, here is the example protos.json:
 
   ```
@@ -38,7 +38,7 @@ Unlike the google protobuf, we write all the protos in the same file, with a uni
 
 To use the protos, we use a parser to parse the protos file into more machine friendly format, which is also a json format, then you can use the result to decode/encode messages.
 
-###RootMessage support
+### RootMessage support
 you can write rootMessage in protos for global usage  
 ```
 {
@@ -74,7 +74,7 @@ you can write rootMessage in protos for global usage
 }
 ```
 
-###Server side and Client side
+### Server side and Client side
 Pomelo-protobuf has server code and client code for js.
 
 - The server code run in Node.JS environment, use Buffer to represent the binary data.
@@ -138,7 +138,7 @@ To use the protbuf as browser, you need to include the /client/protobuf.js in yo
 The protobuf will be a global variable, and you need to get the parsed protos from server.
 The others are the same as in server side, except the encoder result will by a ByteArray instead of Buffer.
 
-###Compatibility
+### Compatibility
 For the same message and proto, the encode results are **the same** for **pomelo-protobuf** and **google protobuf** .This means you can exchange binary data with google-protobuf.
 
 Some how we has some changes in the proto file, and there are some features we do not support, there are the different:
