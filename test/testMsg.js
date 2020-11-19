@@ -1,5 +1,9 @@
 var tc = module.exports;
 
+tc['area.playerHandler.enter'] = {
+  map : [],
+};
+
 tc['area.playerHandler.enterScene'] = {
     map : {
         name : 'a',

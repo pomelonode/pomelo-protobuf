@@ -132,6 +132,15 @@
     },
     "required Position position" : 2
   },
+  "area.playerHandler.enter": {
+    "message NPC" : {
+      "required uInt32 entityId" : 1,
+      "required uInt32 kindId" : 2,
+      "required uInt32 x" : 3,
+      "required uInt32 y" : 4
+    },
+    "repeated NPC map" : 1
+  },
   "area.playerHandler.enterScene" : {
     "message Entities" : {
       "message NPC" : {
